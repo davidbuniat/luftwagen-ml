@@ -28,25 +28,35 @@ matrixListTest = []
 yListTrain = []
 yListTest = []
 
-max_n = 1
-def denormalize(arr):
-	return arr*max_n
+g_max_n = 1
+
 
 def normalize(arr):
-	max_n = np.amax(arr)
+	max_n_i = np.amax(arr)
 	min_n = np.amin(arr)
 	mean_n = np.mean(arr)
-	print(max_n)
+	g_max_n = max_n
 	for i in range(len(TMP)):
 		#arr[i] = (arr[i] - mean_n)/(max_n-min_n)
-		arr[i] = arr[i]/max_n
+		arr[i] = arr[i]/max_n_i
+	return (arr, max_n_i)
+
+
+max_n = [1,1,1,1]
+
+(TMP, max_n[0]) = normalize(TMP)
+(WDIR, max_n[1]) = normalize(WDIR)
+(WSPD, max_n[2]) = normalize(WSPD)
+(yList, max_n[3]) = normalize(yList)
+
+def normalize_in(arr):
+	arr[0] = arr[0]/max_n[0]
+	arr[1] = arr[1]/max_n[1]
+	arr[2] = arr[2]/max_n[2] 
 	return arr
 
-
-TMP = normalize(TMP)
-WDIR = normalize(WDIR)
-WSPD = normalize(WSPD)
-yList = normalize(yList)
+def denormalize(arr):
+	return arr*max_n[3]
 
 for i in range(segmentvar):
 	yListTrain.append(yList[i])
