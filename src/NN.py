@@ -1,11 +1,22 @@
 #!/usr/bin/env python
+from __future__ import print_function
 
 """
+
 The following code has been developed for prototyping purposes of Luftwage Machine Learning Algorithm.
 It is heavily based on the example provided by Lasagne for MNIST dataset
-"""
 
-from __future__ import print_function
+Usage
+
+    import NN as nn 
+    get_pm5_prediction = nn.setup()
+    print(get_pm5_prediction(TMP = 12,WDIR = 334,WSPD = 5.4))
+
+""" 
+
+
+
+
 
 import sys
 import os
@@ -201,8 +212,7 @@ def main(model='mlp', num_epochs=epocs):
         return data.denormalize(get_prediction([data.normalize_in([TMP, WDIR, WSPD])]))[0][0]
     return get_pred
 
-def setup():
-    get_prediction= main() 
-    return get_prediction 
 
-setup()(12,334,5.4)
+def setup():
+    get_prediction = main() 
+    return get_prediction 
