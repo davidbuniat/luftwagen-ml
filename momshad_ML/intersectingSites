@@ -1,0 +1,54 @@
+START
+['CO', 'BX5', None]
+END
+START
+['COm', 'BX5', None]
+END
+START
+['NO2', 'TH1', 'BQ7', 'BG1', 'GR4', 'RG1', 'CD4', 'TD0', 'BX5', 'BX7', None]
+END
+START
+['NO2m', 'TH1', 'BQ7', 'BG1', 'GR4', 'RG1', 'CD4', 'TD0', 'BX5', 'BX7', None]
+END
+START
+['NO', 'TH1', 'BQ7', 'BG1', 'GR4', 'RG1', 'CD4', 'TD0', 'BX5', 'BX7', None]
+END
+START
+['NOm', 'TH1', 'BQ7', 'BG1', 'GR4', 'RG1', 'CD4', 'TD0', 'BX5', 'BX7', None]
+END
+START
+['NOX', 'TH1', 'BQ7', 'BG1', 'GR4', 'RG1', 'CD4', 'TD0', 'BX5', 'BX7', None]
+END
+START
+['NOXm', 'TH1', 'BQ7', 'BG1', 'GR4', 'RG1', 'CD4', 'TD0', 'BX5', 'BX7', None]
+END
+START
+['O3', 'TH1', 'BQ7', 'GR4', 'TD0', 'RG1', 'BX7', None]
+END
+START
+['O3m', 'TH1', 'BQ7', 'GR4', 'TD0', 'RG1', 'BX7', None]
+END
+START
+['PM10', 'TH1', 'BQ7', 'GR4', 'RG1', 'BX7', None]
+END
+START
+['DUST', 'TH1', 'BQ7', 'GR4', 'RG1', 'BX7', None]
+END
+START
+['PM25', 'TD0', 'GR4', None]
+END
+START
+['FINE', 'BQ7', 'BX7', None]
+END
+START
+['SO2', 'TH1', 'BG1', 'GR4', 'TD0', 'BX5', None]
+END
+START
+['SO2m', 'TH1', 'BG1', 'GR4', 'TD0', 'BX5', None]
+END
+START
+['BENZ', None]
+END
+START
+['BENZm', None]
+END

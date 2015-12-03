@@ -3,7 +3,7 @@ yList = []
 maxVal = -99
 minVal = 9999999
 total = 0
-file = open("O3val")
+file = open("PM25/PM25val")
 for i in file:
 	if float(i) > maxVal:
 		maxVal = float(i)
