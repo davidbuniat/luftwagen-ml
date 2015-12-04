@@ -112,7 +112,7 @@ def iterate_minibatches(inputs, targets, batchsize, shuffle=False):
 
 def main(model='mlp', num_epochs=epocs):
     # Load the dataset
-    print("Loading data...")
+    #print("Loading data...")
     X_train, y_train, X_val, y_val, X_test, y_test = load_dataset()
 
     # Prepare Theano variables for inputs and targets
@@ -120,7 +120,7 @@ def main(model='mlp', num_epochs=epocs):
     target_var = T.dvector('targets')
 
     # Create neural network model (depending on first command line parameter)
-    print("Building model and compiling functions...")
+    #print("Building model and compiling functions...")
 
     network = build_mlp(input_var)
 
@@ -158,7 +158,7 @@ def main(model='mlp', num_epochs=epocs):
     get_prediction = theano.function([input_var], prediction)
 
     # Finally, launch the training loop.
-    print("Starting training...")
+    #print("Starting training...")
     # We iterate over epochs:
     for epoch in range(num_epochs):
         # In each epoch, we do a full pass over the training data:
@@ -184,13 +184,14 @@ def main(model='mlp', num_epochs=epocs):
             val_batches += 1
 
         # Then we print the results for this epoch:
+        '''
         print("Epoch {} of {} took {:.3f}s".format(
             epoch + 1, num_epochs, time.time() - start_time))
         print(train_batches)
         print("  training loss:\t\t{:.6f}".format(train_err / train_batches))
         print("  validation loss:\t\t{:.6f}".format(val_err / val_batches))
         print("  validation accuracy:\t\t{:.2f} %".format(val_acc / val_batches * 100))
-
+        '''
     # After training, we compute and print the test error:
     test_err = 0
     test_acc = 0
@@ -201,10 +202,11 @@ def main(model='mlp', num_epochs=epocs):
         test_err += err
         test_acc += acc
         test_batches += 1
+        '''
     print("Final results:")
     print("  test loss:\t\t\t{:.6f}".format(test_err / test_batches))
     print("  test accuracy:\t\t{:.2f} %".format(test_acc / test_batches * 100))
-
+    '''
     # Optionally, you could now dump the network weights to a file like this:
     np.savez('model.npz', lasagne.layers.get_all_param_values(network))
     
